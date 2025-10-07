@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Birkha Maya Rai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Birkha Maya Rai</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link active">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Technical Skills
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML, CSS, JavaScript</span>
+                            <span class="skill-level">Beginner</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Database Design (SQL)</span>
+                            <span class="skill-level">Basic</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Microsoft Office Suite</span>
+                            <span class="skill-level">Proficient</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Graphic Design (Canva, Figma)</span>
+                            <span class="skill-level">Basic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-users"></i>
+                        Soft Skills
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Communication & Collaboration</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Classroom Management</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Critical Thinking</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Problem-Solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Birkha Maya Rai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+     <script>
+        // Dark/Light Mode Toggle
+        const body = document.body;
+
+        // Create toggle button dynamically
+        const modeToggle = document.createElement('button');
+        modeToggle.id = 'mode-toggle';
+        modeToggle.textContent = '🌙 Dark Mode';
+        modeToggle.style.position = 'fixed';
+        modeToggle.style.top = '10px';
+        modeToggle.style.right = '10px';
+        modeToggle.style.padding = '8px 12px';
+        modeToggle.style.border = 'none';
+        modeToggle.style.borderRadius = '6px';
+        modeToggle.style.cursor = 'pointer';
+        modeToggle.style.zIndex = '1000';
+        document.body.appendChild(modeToggle);
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            modeToggle.textContent = body.classList.contains('dark-mode') 
+                ? '☀️ Light Mode' 
+                : '🌙 Dark Mode';
+        });
+    </script>
+</body>
+</html>

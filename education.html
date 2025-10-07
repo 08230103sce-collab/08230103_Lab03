@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Birkha Maya Rai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Birkha Maya Rai</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link active">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Section -->
+    <section id="education" class="education page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Educational journey image -->
+            <div class="education-journey">
+                <div class="high-school-photos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/high%20school%201.jpg-FHCOeynw4dbYovocEJIQKPmIZFHU90.jpeg" alt="High School Group Photo 1" class="high-school-image">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/high%20school%202.jpg-sOh5ysH6AqX3t6htY1Sjke2C8CADQS.jpeg" alt="High School Group Photo 2" class="high-school-image">
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Grid layout  -->
+            <div class="education-grid">
+                <div class="education-card current">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>B.Ed (Information Technology (IT))</h3>
+                        <p class="institution">Samtse College of Education</p>
+                        <p class="duration">2023 – 2027</p>
+                        <p class="status">Currently Pursuing</p>
+                        <p class="description">
+                            I am currently a third-year trainee at SCE, pursuing a four-year Bachelor of Education(B.Ed) with a specialization 
+                            in Information Technology (IT). My course focuses on ICT integration in educational settings, and I am preparing 
+                            for a future career in teaching. Throughout the program, I study various modules and will also complete a six-month 
+                            Teaching Practice during my time at the college to gain hands-on classroom experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Higher Secondary Education</h3>
+                        <p class="institution">Sarpang Central School and Rinchen Higher Secondary School</p>
+                        <p class="duration">Grade 9 - 12</p>
+                        <p class="description">
+                            I studied at Sarpang Higher Secondary School from 2019 to 2022, covering classes 9 to 12. In Classes 9 
+                            and 10, I chose ICT as my optional subject because I was interested in it and didn't had the chance to use 
+                            computers in my lower school years. After qualifying for Class 11, I took the Arts stream. In Classes 11 and 12, 
+                            I studied Economics and Mathematics along with other Arts subjects. After finishing Class 12 at Sarpang Higher 
+                            Secondary School in 2022, I could not qualify for tertiary education on my first attempt. I then joined Rinchen 
+                            Higher Secondary School to give myself a second chance to improve my results and prove my abilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lower Secondary Education</h3>
+                        <p class="institution">Sarpang Lower Secondary School</p>
+                        <p class="duration">Grade PP - 8</p>
+                        <p class="description">
+                            I attended Sarpang Lower Secondary School from 2009 to 2018, where I completed my primary and lower 
+                            secondary education. During this time, I was not very active in co-curricular activities, but I consistently 
+                            performed well in my studies and developed a strong foundation for learning. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Birkha Maya Rai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+     <script>
+        // Dark/Light Mode Toggle
+        const body = document.body;
+
+        // Create toggle button dynamically
+        const modeToggle = document.createElement('button');
+        modeToggle.id = 'mode-toggle';
+        modeToggle.textContent = '🌙 Dark Mode';
+        modeToggle.style.position = 'fixed';
+        modeToggle.style.top = '10px';
+        modeToggle.style.right = '10px';
+        modeToggle.style.padding = '8px 12px';
+        modeToggle.style.border = 'none';
+        modeToggle.style.borderRadius = '6px';
+        modeToggle.style.cursor = 'pointer';
+        modeToggle.style.zIndex = '1000';
+        document.body.appendChild(modeToggle);
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            modeToggle.textContent = body.classList.contains('dark-mode') 
+                ? '☀️ Light Mode' 
+                : '🌙 Dark Mode';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Birkha Maya Rai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Birkha Maya Rai</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <!-- Images -->
+                <div class="about-photos">
+                    <div class="photo-item">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/college.jpg-3R5eA2vNOoquGiuQxEqgO57ZvWtTsc.jpeg" alt="Chhimi at college in traditional green dress" class="about-photo">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <!-- Biographical information -->
+                    <p>
+                        Hello! My name is Birkha Maya Rai. Currently, I am a trainee at Samtse College of Education, 
+                        pursuing a B.Ed in ICT. 
+                    </p>
+                    <p>
+                        I come from Sarpang and belong to a middle-class family that values education and community service. 
+                        I am the second eldest of four siblings. My elder brother completed his tertiary education at JNEC, 
+                        and my younger brother and sister are still studying.
+                        
+                        My family has always supported my education and my aspiration to become a teacher. I completed my 
+                        schooling at Sarpang LSS (2018), Sarpang Central School (2021), and Rinchen HSS (2022). 
+                    </p>
+                    <p>
+                        Currently, I am exploring my interests in Information and Communication Technology, 
+                        making new friendships, and preparing for my future career in teaching where I hope to 
+                        make a positive impact on students' lives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Birkha Maya Rai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+     <!-- Keep this here at the very end -->
+    <script>
+        // Dark/Light Mode Toggle
+        const body = document.body;
+
+        // Create toggle button dynamically
+        const modeToggle = document.createElement('button');
+        modeToggle.id = 'mode-toggle';
+        modeToggle.textContent = '🌙 Dark Mode';
+        modeToggle.style.position = 'fixed';
+        modeToggle.style.top = '10px';
+        modeToggle.style.right = '10px';
+        modeToggle.style.padding = '8px 12px';
+        modeToggle.style.border = 'none';
+        modeToggle.style.borderRadius = '6px';
+        modeToggle.style.cursor = 'pointer';
+        modeToggle.style.zIndex = '1000';
+        document.body.appendChild(modeToggle);
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            modeToggle.textContent = body.classList.contains('dark-mode') 
+                ? '☀️ Light Mode' 
+                : '🌙 Dark Mode';
+        });
+    </script>
+
+</body>
+</html>
